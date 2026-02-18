@@ -69,7 +69,7 @@ Analytics & Performance Dashboard transforms your Odoo into a data-driven powerh
 
 ### Installation
 
-1. Download the module from the [Odoo App Store](https://apps.odoo.com)
+1. Download the module from the [Odoo App Store](https://apps.odoo.com/apps/modules/17.0/analytics_module)
 2. Extract to your Odoo addons directory
 3. Restart Odoo and update the apps list
 4. Install "Analytics & Performance Dashboard"
@@ -160,7 +160,7 @@ Test coverage includes:
 
 - **Email**: odoo@momosoft.com
 - **Issues**: [GitHub Issues](https://github.com/chalermchaic/odoo-analytics/issues)
-- **Odoo Store**: [Analytics & Performance Dashboard](https://apps.odoo.com)
+- **Odoo Store**: [Analytics & Performance Dashboard](https://apps.odoo.com/apps/modules/17.0/analytics_module)
 
 ---
 
