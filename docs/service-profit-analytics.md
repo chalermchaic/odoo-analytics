@@ -1,8 +1,8 @@
-# Service Profit Analytics for Odoo 17
+# Service Profit Analytics for Odoo 17 & 18
 
 **True Project & Client Profitability, Billable Utilization & Unbilled WIP — Without Excel.**
 
-Built for IT companies, creative agencies, and consulting firms running **Odoo 17.0 (Community & Enterprise)**. Service Profit Analytics aggregates Projects, Timesheets, and Posted Invoices in read-only PostgreSQL views so you can spot margin leaks and unbilled work in seconds.
+Built for IT companies, creative agencies, and consulting firms running **Odoo 17.0 or 18.0 (Community & Enterprise)**. Service Profit Analytics aggregates Projects, Timesheets, and Posted Invoices in read-only PostgreSQL views so you can spot margin leaks and unbilled work in seconds.
 
 ---
 
@@ -41,10 +41,20 @@ Built for IT companies, creative agencies, and consulting firms running **Odoo 1
 
 ## Installation & Configuration
 
-1. Install **Service Profit Analytics** (`service_profit_analytics`) from Apps.
+1. Install **Service Profit Analytics** (`service_profit_analytics`) from Apps (`17.0.4.0.0` for Odoo 17, `18.0.4.0.0` for Odoo 18).
 2. Complete the **2-minute Setup Wizard** (choose IT / Agency / Consulting preset or custom thresholds).
 3. Configure employee hourly cost rates under **Service Profit > Configuration > Employee Cost Rates**.
 4. (Optional) Enable the **Margin & WIP Alert Digest** under **Settings > Service Profit Analytics**.
+
+### Upgrading from Odoo 17 to 18
+
+Moving an existing database from Odoo 17 to Odoo 18 uses Odoo's official database upgrade service. Once your database is upgraded to Odoo 18:
+
+1. Place the `18.0` series of `service_profit_analytics` (`18.0.4.0.0`) in your Odoo 18 addons path and upgrade the module (`-u service_profit_analytics`).
+2. **No manual module migration steps are required** — employee cost rates and settings are preserved, and the read-only SQL report views are recreated automatically.
+3. **Post-upgrade checks:**
+   - Open the OWL Executive Dashboard and the 4 SQL-view reports (Project Profitability, Monthly P&L, Client Profitability, Billable Utilization) to confirm data renders cleanly.
+   - Verify your Margin & WIP Alert Digest settings and scheduled action if enabled.
 
 ---
 
