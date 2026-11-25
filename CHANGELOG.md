@@ -1,6 +1,23 @@
 # Changelog
 
-All notable changes to the Analytics & Performance Dashboard module.
+All notable changes to the Analytics & KPI Dashboard module.
+
+## [17.0.9.0.0] - 2026-11-25
+
+### Store Readiness & BI Endpoint Tester
+- **In-Odoo API Endpoint Tester**: Select any `/api/v1/analytics/*` endpoint on the API Key form and test it in-process with status code and JSON preview
+- **Ready-to-Paste BI Snippets**: Copyable Power BI (M Query), Grafana (JSON API), and cURL snippets using `<YOUR_API_KEY>`
+- **App Title & License**: Renamed to **Analytics & KPI Dashboard** and updated module license to `OPL-1` (previously distributed LGPL-3 copies remain LGPL-3)
+- **Demo Data**: Updated demo API keys (generated via ORM) and inactive-by-default demo webhooks
+
+## [17.0.8.x] - 2026-11-24
+
+### API Controls, Webhooks & Scale Verification
+- **API Key Generation**: One-click **Generate / Regenerate Key** action (shown once, stored hashed)
+- **Rate Limiting**: Fixed-window per-key rate limiting returning `429 Too Many Requests` with `Retry-After` header
+- **Date Parameter Validation**: Strict `YYYY-MM-DD` validation and `date_from <= date_to` check returning `400 Bad Request`
+- **HTTPS-Only Webhooks**: Slack (`hooks.slack.com`) and Teams (`*.webhook.office.com`) webhooks over HTTPS
+- **Scale Benchmark & Coverage**: Verified ≤ 0.35 s dashboard queries on 1,000,000 usage rows and 320+ automated tests (96% coverage)
 
 ## [7.0.0] - 2026-02-15
 
@@ -10,7 +27,7 @@ All notable changes to the Analytics & Performance Dashboard module.
 - **Batch SQL queries** replacing N+1 ORM loops in cleanup, aggregation, and widget data
 - **API pagination** with configurable `offset`/`limit` (max 1000 records per request)
 - **Batch CSV export** with streaming to prevent out-of-memory on large exports
-- **Parameterized SQL** in KPI calculations (no SQL injection risk)
+- **Parameterized SQL** in KPI calculations
 - **Batch user performance** calculation via single SQL query
 - 17 new performance tests
 

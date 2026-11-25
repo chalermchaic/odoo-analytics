@@ -1,13 +1,13 @@
-# Analytics & Performance Dashboard for Odoo 17
+# Analytics & KPI Dashboard for Odoo 17
 
 ![Banner](screenshots/banner.png)
 
-**Real-time analytics, intelligent insights, and custom dashboards for your Odoo ERP.**
+**Real-time analytics, intelligent insights, custom dashboards, and REST API for BI tools (Power BI, Grafana, Tableau).**
 
 [![Odoo Version](https://img.shields.io/badge/Odoo-17.0-blueviolet)](https://www.odoo.com)
-[![License](https://img.shields.io/badge/License-LGPL--3-blue.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/Tests-240%20passed-brightgreen)](#testing)
-[![Version](https://img.shields.io/badge/Version-7.0.0-orange)](#changelog)
+[![License](https://img.shields.io/badge/License-OPL--1-blue.svg)](https://www.odoo.com/documentation/17.0/legal/licenses.html)
+[![Tests](https://img.shields.io/badge/Tests-320%2B%20passed-brightgreen)](#testing)
+[![Version](https://img.shields.io/badge/Version-17.0.9.0.0-orange)](#changelog)
 
 ---
 
@@ -22,8 +22,8 @@ Analytics & Performance Dashboard transforms your Odoo into a data-driven powerh
 | **Real-time Dashboard** | KPI cards, trend charts, module distribution, slowest operations |
 | **Custom Dashboard Builder** | 7 widget types, drag-and-drop, per-user dashboards |
 | **Intelligent Insights** | Auto-detect anomalies, bottlenecks, and trends |
-| **REST API** | 9 endpoints for Power BI, Grafana, Tableau integration |
-| **Slack & Teams** | Critical alerts and daily digest notifications |
+| **REST API & Tester** | 9 endpoints for BI tools (Power BI, Grafana, Tableau) + live in-Odoo endpoint tester &amp; snippets |
+| **Slack & Teams** | HTTPS-only critical alerts and daily digest notifications |
 | **KPI Targets** | Set goals, track achievement %, visual status indicators |
 | **User Performance** | Efficiency scoring, leaderboard, training recommendations |
 | **White-label Branding** | Custom title, logo, colors per company |
@@ -96,7 +96,8 @@ Analytics & Performance Dashboard transforms your Odoo into a data-driven powerh
 | [API Reference](docs/api-reference.md) | 9 REST API endpoints with examples |
 | [Dashboard Builder](docs/dashboard-builder.md) | Widget types, creating custom dashboards |
 | [FAQ](docs/faq.md) | Common questions and troubleshooting |
-| [Changelog](CHANGELOG.md) | Version history (v1.0 - v7.0) |
+| [Changelog](CHANGELOG.md) | Version history (`17.0.1.0.0` - `17.0.9.0.0`) |
+| [Service Profit Analytics](docs/service-profit-analytics.md) | Project & client profitability, utilization & unbilled WIP for Odoo 17 |
 
 ---
 
@@ -152,7 +153,7 @@ Test coverage includes:
 - **Batch SQL**: Optimized queries with no N+1 loops
 - **6 Composite Indexes**: Fast filtering by company + module + timestamp
 - **API Pagination**: Configurable offset/limit (max 1000 records)
-- **Parameterized SQL**: Safe from SQL injection
+- **Parameterized SQL**: Parameterized SQL queries throughout
 
 ---
 
@@ -166,6 +167,7 @@ Test coverage includes:
 
 ## License
 
-This module is licensed under [LGPL-3](LICENSE).
+The `analytics_module` Odoo module is licensed under the **Odoo Proprietary License v1.0 (`OPL-1`)**. Copies previously distributed under `LGPL-3` remain under `LGPL-3`.
+This documentation repository retains its own `LICENSE` file.
 
 **Author**: MomoSoft | **Maintainer**: MomoSoft

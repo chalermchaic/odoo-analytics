@@ -65,15 +65,15 @@ The system automatically resolves insights older than 30 days if the underlying 
 
 ### How do I get an API key?
 
-Go to **Analytics > Configuration > API Keys** > New. The key is auto-generated. Copy it before leaving the page (it's shown masked afterward).
+Go to **Analytics > Configuration > API Keys** > New, save the record, and click **Generate / Regenerate Key**. The raw key is shown once in a notification; copy it immediately (only a masked prefix is shown afterward). Note: demo API keys are unusable by design because their raw key is discarded during demo load — generate a new key for live use.
 
 ### What's the rate limit?
 
-There is no built-in rate limit, but the API enforces a maximum of **1000 records per request** via the `limit` parameter. For large datasets, use pagination with `offset`.
+API keys enforce a per-minute rate limit (default `60` requests/minute, configurable via `analytics_module.api_rate_limit`). Exceeding it returns HTTP `429 Too Many Requests` with a `Retry-After` header. List endpoints also enforce a maximum of **1000 records per request** via `limit` and `offset`.
 
 ### Can I use the API with tools like Power BI or Grafana?
 
-Yes! See [Integration Examples](api-reference.md#integration-examples) in the API reference.
+Yes! Open any API key's **Endpoint Tester & BI Snippets** tab to test endpoints in-process and copy ready-to-paste Power BI (M Query), Grafana (JSON API), and cURL snippets. See [Integration Examples](api-reference.md#integration-examples) in the API reference.
 
 ### API returns "Invalid API key"
 
