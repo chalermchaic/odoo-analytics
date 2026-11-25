@@ -15,7 +15,12 @@ curl -H "X-API-Key: YOUR_API_KEY" \
   http://localhost:8069/api/v1/analytics/dashboard
 ```
 
-API keys can be created at **Analytics > Configuration > API Keys**.
+API keys can be created at **Analytics > Configuration > API Keys**. Click **Generate / Regenerate Key** to create a key (shown once upon generation and stored hashed). You can also test endpoints in-process and copy ready-to-paste **Power BI (M Query)**, **Grafana (JSON API)**, and **cURL** snippets directly from the **Endpoint Tester & BI Snippets** tab.
+
+## Rate Limiting & Validation
+
+- **Rate Limit**: Each API key is rate-limited per minute (configurable via `analytics_module.api_rate_limit`, default `60` requests/min). Exceeding the limit returns HTTP `429 Too Many Requests` with a `Retry-After` header (seconds).
+- **Date Parameters**: `date_from` and `date_to` must use `YYYY-MM-DD` format with `date_from <= date_to`. Invalid values return HTTP `400 Bad Request`.
 
 ## Pagination
 
