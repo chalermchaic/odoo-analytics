@@ -4,13 +4,13 @@
 
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
-| Odoo | 17.0 / 18.0 | 17.0 or 18.0 latest |
-| Python | 3.10 | 3.10+ (3.12 on Odoo 18.0) |
+| Odoo | 17.0 / 18.0 / 19.0 | 17.0, 18.0, or 19.0 latest |
+| Python | 3.10 | 3.10+ (3.12 on Odoo 18.0 / 19.0) |
 | PostgreSQL | 14 | 15+ |
 | RAM | 2 GB | 4 GB+ |
 | Disk | 100 MB | 500 MB+ (with analytics data) |
 
-**Compatible with**: Odoo 17.0 and 18.0 Community and Enterprise editions.
+**Compatible with**: Odoo 17.0, 18.0, and 19.0 Community and Enterprise editions.
 
 ---
 
@@ -131,6 +131,17 @@ Or upgrade from the UI:
 1. Go to **Apps**
 2. Search for "Analytics"
 3. Click the module > **Upgrade**
+
+### Upgrading from Odoo 18 to 19
+
+Moving an existing database from Odoo 18 to Odoo 19 uses Odoo's official database upgrade service. Once your database is upgraded to Odoo 19:
+
+1. Place the `19.0` series of `analytics_module` (`19.0.9.0.0`) in your Odoo 19 addons path and upgrade the module (`-u analytics_module`).
+2. **No manual module migration steps are required** — all existing analytics tables, API keys, webhooks, and branding settings are preserved automatically.
+3. **Post-upgrade checks:**
+   - Verify existing API keys still authenticate against `/api/v1/analytics/health` or via the in-Odoo Endpoint Tester.
+   - Verify Slack/Teams webhooks and scheduled digest actions are active.
+   - Open the Analytics Dashboard, Insights, and Custom Dashboard Builder to confirm reports load cleanly.
 
 ### Upgrading from Odoo 17 to 18
 
